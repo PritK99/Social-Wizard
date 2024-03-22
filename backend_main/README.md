@@ -34,3 +34,10 @@ chmod +x local_setup.sh
 
 ### Step 5: Send request to the url http:://localhost:port/getAnalysis
 
+## For guys with windows
+
+```python -m venv media```
+
+```media\Scripts\activate```
+
+``` pip install .\requirements.txt```

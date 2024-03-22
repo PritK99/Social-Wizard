@@ -3,3 +3,4 @@ flask-restful
 requests
 google-generativeai
 python-Levenshtein
+fuzzywuzzy
