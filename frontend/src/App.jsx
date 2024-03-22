@@ -1,20 +1,21 @@
-import { useState } from 'react'
+import { BrowserRouter as Router, Routes, Route } from "react-router-dom";
 import Navbar from './Navbar.jsx'
+import HomePage from "./HomePage.jsx";
 import './App.css'
+import Audience from "./Audience.jsx";
 
 function App() {
   return (
     <div className='flex flex-col max-w-screen max-h-screen'>
-      <Navbar/>
-      <div className="card max-w-screen shadow-xl h-screen bg-base-300">
-        <div className="card-body">
-          <h2 className="card-title">Card title!</h2>
-          <p>If a dog chews shoes whose shoes does he choose?</p>
-          <div className="card-actions justify-end">
-            <button className="btn btn-primary">Buy Now</button>
-          </div>
-        </div>
-      </div>
+      <Router>
+        <Navbar/>
+        <Routes>
+          <Route path="/" element={<HomePage/>}></Route>
+          <Route path="/audience" element={<Audience/>}></Route>
+          <Route path="/content-gen" element={<Audience/>}></Route>
+        </Routes>
+      </Router>
+      
     </div>
   )
 }
