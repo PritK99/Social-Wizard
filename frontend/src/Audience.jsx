@@ -42,7 +42,7 @@ export default function Audience() {
                     </div>
                     <div className="flex flex-row gap-x-5">
                         <input type="text" placeholder="example_123" className="input input-bordered w-full max-w-lg" />
-                        <button className="btn btn-primary">Button</button>
+                        <button className="btn btn-primary">Submit</button>
                     </div>
                     </label>
                 </div>
