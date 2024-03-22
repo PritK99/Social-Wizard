@@ -3,6 +3,7 @@ import Navbar from './Navbar.jsx'
 import HomePage from "./HomePage.jsx";
 import './App.css'
 import Audience from "./Audience.jsx";
+import Content from "./Content.jsx";
 
 function App() {
   return (
@@ -12,7 +13,7 @@ function App() {
         <Routes>
           <Route path="/" element={<HomePage/>}></Route>
           <Route path="/audience" element={<Audience/>}></Route>
-          <Route path="/content-gen" element={<Audience/>}></Route>
+          <Route path="/content-gen" element={<Content/>}></Route>
         </Routes>
       </Router>
       
