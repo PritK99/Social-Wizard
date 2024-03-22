@@ -7,7 +7,7 @@ import {
 import Chart from "react-apexcharts";
 
 
-const chartConfig = {
+const chartConfig1 = {
 type: "pie",
 width: 280,
 height: 280,
@@ -24,12 +24,37 @@ options: {
     dataLabels: {
     enabled: false,
     },
-    colors: ["#020617", "#ff8f00", "#00897b", "#1e88e5", "#d81b60"],
+    colors: ["#4CAF50","#FFC107" ,"#2196F3" ,"#FF5722" ,"#9C27B0" ],
     legend: {
     show: false,
     },
 },
 };
+
+
+const chartConfig2 = {
+    type: "pie",
+    width: 280,
+    height: 280,
+    series: [40, 59, 10, 46, 22],
+    options: {
+        chart: {
+        toolbar: {
+            show: false,
+        },
+        },
+        title: {
+        show: "",
+        },
+        dataLabels: {
+        enabled: false,
+        },
+        colors: ["#020617", "#ff8f00", "#00897b", "#1e88e5", "#d81b60"],
+        legend: {
+        show: false,
+        },
+    },
+    };
 
 export default function Audience() {
     return (
@@ -48,7 +73,7 @@ export default function Audience() {
                 </div>
                 <div className="card bg-base-100 basis-1/2 shadow-xl p-5">
                     <figure className="px-5 pt-5">
-                        <Chart {...chartConfig} />
+                        <Chart {...chartConfig1} />
                     </figure>
                     <div className="card-body items-center text-center">
                         <h2 className="card-title pb-0">Countries</h2>
@@ -121,7 +146,7 @@ export default function Audience() {
             <div className="basis-1/3 flex flex-col gap-y-5">
                 <div className="card bg-base-100 basis-1/2 shadow-xl p-5">
                     <figure className="px-5 pt-5">
-                        <Chart {...chartConfig} />
+                        <Chart {...chartConfig2} />
                     </figure>
                     <div className="card-body items-center text-center">
                         <h2 className="card-title pb-0">Countries</h2>
