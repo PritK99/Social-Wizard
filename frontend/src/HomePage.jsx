@@ -1,13 +1,15 @@
 export default function HomePage() {
     return (
-        <div className="card w-screen h-screen bg-base-100 shadow-xl">
-        <div className="card-body">
-            <h2 className="card-title">Card title!</h2>
-            <p>If a dog chews shoes whose shoes does he choose?</p>
-            <div className="card-actions justify-end">
-            <button className="btn btn-primary">Buy Now</button>
+        <div className="card flex flex-col w-screen h-screen shadow-xl image-full p-0">
+            <figure><img src="https://i.pinimg.com/originals/81/08/4d/81084d04dbcadec0b75a7d494b253d7d.gif" alt="Shoes" /></figure>
+            <div className="card-body">
+            <h2 className="text-center text-5xl font-bold p-10">Welcome to Social Wizard</h2>
+            <p className="p-10 text-lg">Struggling to navigate the ever-changing social media landscape? Look no further! 
+            Social Manager is your one-stop shop for crafting winning social media strategies.
+            </p>
+            <a href="/audience"><button className="btn btn-primary">Get Started</button></a>
             </div>
-        </div>
+            
         </div>
     )
 }

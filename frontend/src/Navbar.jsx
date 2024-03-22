@@ -10,6 +10,9 @@ export default function Navbar() {
           <li>
             <a href="/content-gen">Content Generation</a>
           </li>
+          <li>
+            <a href="/performance">Performance Metrics</a>
+          </li>
         </ul>
       </div>
     </div>

@@ -4,6 +4,7 @@ import HomePage from "./HomePage.jsx";
 import './App.css'
 import Audience from "./Audience.jsx";
 import Content from "./Content.jsx";
+import Perf from "./Perf.jsx";
 
 function App() {
   return (
@@ -14,6 +15,7 @@ function App() {
           <Route path="/" element={<HomePage/>}></Route>
           <Route path="/audience" element={<Audience/>}></Route>
           <Route path="/content-gen" element={<Content/>}></Route>
+          <Route path="/performance" element={<Perf/>}></Route>
         </Routes>
       </Router>
       
