@@ -16,7 +16,15 @@
 
 ## About
 
+The project aims to create an AI-powered tool to assist small businesses in developing effective social media marketing campaigns. The tool analyzes target audience demographics, suggests personalized content, optimizes posting schedules for maximum engagement, and tracks campaign performance in real-time.
 
+Features:
+
+* Audience Analysis: Utilize AI to analyze target audience demographics, psychographics, and behaviors.
+* Content Suggestions: Provide personalized content suggestions, including text, images, and hashtags, based on audience analysis.
+* Posting Schedule Optimization: Recommend optimal times and frequencies for posting on various social media platforms to maximize engagement.
+* Performance Tracking: Track campaign performance in real-time and offer insights for improvement.
+  
 ## Demo
 
 https://github.com/PritK99/Social-Wizard/assets/103848930/8042e608-aa49-4029-b6c5-412c15618351
