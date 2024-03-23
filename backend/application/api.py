@@ -24,6 +24,7 @@ message_analysis_args = {
 
 message_content_args = {
     "title", 
+    "description"
 
 }
 
