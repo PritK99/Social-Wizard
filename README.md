@@ -19,9 +19,7 @@
 
 ## Demo
 
-```
-Demo video to be added soon
-```
+https://github.com/PritK99/Social-Wizard/assets/103848930/8042e608-aa49-4029-b6c5-412c15618351
 
 ## Tech Stack
 
