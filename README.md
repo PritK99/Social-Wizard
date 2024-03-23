@@ -106,12 +106,16 @@ chmod +x local_run.sh
 ./local_setup.sh
 ```
 
-Next, go to ```./.env/pyvenv.cfg``` and add these 3 environment variables in config file using your own API keys:
+Next, set the below 3 environment variables using EXPORT command in local_run.sh file using your own API keys:
 
 ```
-GEMINI_API_KEY = 
-UNSPLASH_ACCESS_KEY = 
-RAPID_API_KEY = 
+EXPORT GEMINI_API_KEY = 
+```
+```
+EXPORT UNSPLASH_ACCESS_KEY = 
+```
+```
+EXPORT RAPID_API_KEY = 
 ```
 
 ```bash
