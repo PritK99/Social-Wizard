@@ -68,7 +68,7 @@ class ContentGenerator:
             prompt = "Give me a social media post which I can directly post on topic: " + title + ". " + description + " Provide personalized content suggestions, including text, emojis and hashtags. Make it very captivating and interesting based on the topics or memes which are currently trending on social media."
 
         post_result = self.model.generate_content(prompt,safety_settings=safety_settings)
-        post_text = clean_text(post_result.text)
+        post_text = post_result.text
 
         img_prompt = ("In one word only give me the main subject in one word only for which an image should be generated: " + title + ". " + description)
         
