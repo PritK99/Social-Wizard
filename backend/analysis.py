@@ -57,7 +57,7 @@ class Analyzer:
         freq_map = {}
         for c in countries : 
             
-            country_name = c.strip()[1:-1]
+            country_name = c.strip()[1:-1].lower()
             freq_map[country_name] =  freq_map.get(country_name,0) + 1 
         sorted_items = sorted(freq_map.items(), key=lambda item: item[1],reverse=True)
 
