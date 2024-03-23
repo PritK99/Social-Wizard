@@ -164,21 +164,21 @@ python main.py
 
 - #### Home Page
 
-    ![home](./assets/home-image.png)
+    ![home](./assets/home-page.jpeg)
 
 - #### Audience Analysis
 
-    ![audience-analysis](./assets/audience-analysis.png)
+    ![audience-analysis](./assets/audience-analysis.jpeg)
 
-    ![audience-analysis-result](./assets/audience-analysis-result.png)
+    ![audience-analysis-result](./assets/audience-analysis-result.jpeg)
 
 - #### Content Generation
 
-    ![content-generation](./assets/content-generation.png)
+    ![content-generation](./assets/content-generation.jpeg)
 
 - #### Performance Metrics
 
-    ![performance-metrics](./assets/performance-metrics.png)
+    ![performance-metrics](./assets/performance-metrics.jpeg)
 
 
 ## Contributors
