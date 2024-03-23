@@ -1,21 +1,22 @@
-
-
 import { useState } from 'react'; // Import useState hook to manage state
 import Chart from "react-apexcharts";
 
 export default function Audience() {
+    const [twit, setTwit] = useState("");
     const [series1, setSeries1] = useState([]);
 
     const [series2, setSeries2] = useState([]);
 
     const [labels1, setLabels1] = useState([]);
 
+    const [topics, setTopics] = useState([]);
+    const [date, setDate] = useState("--");
+
     const chartData1 = {
         type: "pie",
         width: 280,
         height: 280,
         series: series1,
-        labels: labels1,
         options: {
             chart: {
                 toolbar: {
@@ -26,8 +27,9 @@ export default function Audience() {
                 show: "",
             },
             dataLabels: {
-                enabled: false,
+                enabled: true,
             },
+            labels: labels1,
             colors: ["#4CAF50","#FFC107" ,"#2196F3" ,"#FF5722" ,"#9C27B0" ],
             legend: {
                 show: false,
@@ -35,9 +37,10 @@ export default function Audience() {
         },
     }
     const chartData2 = {
-        
+        type: "pie",
+        width: 280,
+        height: 280,
         series: series2,
-        labels : ['0-20', '20-40', '60+'],
         options: {
             chart: {
                 toolbar: {
@@ -48,8 +51,9 @@ export default function Audience() {
                 show: "",
             },
             dataLabels: {
-                enabled: false,
+                enabled: true,
             },
+            labels: ['0-20', '20-40', '40+'],
             colors: ["#020617", "#ff8f00", "#00897b", "#1e88e5", "#d81b60"],
             legend: {
                 show: false,
@@ -65,7 +69,7 @@ export default function Audience() {
                 headers: {
                     'Content-Type': 'application/json',
                 },
-                body: JSON.stringify({ 'userName' : "SRAVJTI" }),
+                body: JSON.stringify({ 'userName' : twit }),
             });
 
             if (!response.ok) {
@@ -92,6 +96,8 @@ export default function Audience() {
                 setLabels1(analysisResults.top_3_locations);
                 setSeries1(analysisResults.location_frequencies);
                 setSeries2(analysisResults.age_groups);
+                setTopics(analysisResults.hot_topics);
+                setDate(analysisResults.recommended_time);
 
             } catch (error) {
                 console.error('Failed to parse response JSON', error);
@@ -110,7 +116,7 @@ export default function Audience() {
                             <span className="label-text text-sm">Enter Twitter ID: </span>
                         </div>
                         <div className="flex flex-row gap-x-5">
-                            <input type="text" placeholder="example_123" className="input input-bordered w-full max-w-lg" />
+                            <input type="text" onChange={(e) => {setTwit(e.target.value)}} placeholder="example_123" className="input input-bordered w-full max-w-lg" />
                             <button className="btn btn-primary" onClick={handleRunButtonClick}>Submit</button>
                         </div>
                     </label>
@@ -131,8 +137,19 @@ export default function Audience() {
                     <h1 className="text-xl font-bold">Trending Topics</h1>
                     <div className="p-0">
                         <table className="table text-lg">
+                            <thead>
+                            <tr>
+                                <th></th>
+                                <th>Topics</th>
+                            </tr>
+                            </thead>
                             <tbody className="pt-0">
-                                {/* Table body */}
+                                {topics.map((item, index) => (
+                                    <tr key={index}>
+                                        <th>#{index + 1}</th>
+                                        <td>{item}</td>
+                                    </tr>
+                                ))}
                             </tbody>
                         </table>
                     </div>
@@ -151,7 +168,7 @@ export default function Audience() {
                 </div>
                 <div className="card bg-zinc-500 basis-1/2 shadow-xl justify-center">
                     <p className="text-lg">Best time to upload: </p>
-                    <p className="text-3xl align-middle">10:30pm IST</p>
+                    <p className="text-3xl align-middle">{`${date} GMT`}</p>
                 </div>
             </div>
         </div>
