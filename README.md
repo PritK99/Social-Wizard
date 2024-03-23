@@ -52,6 +52,7 @@ Demo video to be added soon
  ┃ ┣ 📄README.md 
  ┃ ┣ 📄requirements.txt      
  ┣ 📄README.md
+ ┣ 📄Social Media Campaign Management.pptx
 ``` 
 
 ## Getting Started
