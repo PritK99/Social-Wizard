@@ -46,6 +46,7 @@ class twitterHandler:
 
         response = requests.get(url, headers=headers, params=querystring)
         dictv = json.loads(response.text)
+        print(dictv)
         return dictv['result']['data']['user']['result']['rest_id']
 
     def get_following_data(self):

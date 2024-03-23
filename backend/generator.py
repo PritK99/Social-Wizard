@@ -56,7 +56,7 @@ class ContentGenerator:
             description = title
 
         if self.analyzer :
-            metadata_prompt = f"No of people of age 0-20 : {self.analyzer.age_groups[0]} . No of people of age 20-40 : { self.analyzer.age_groups[1] }. No of people of age 40+ : { self.analyzer.age_groups[2] } .Average age : { self.analyzer.age} . Top 3 locations : { self.analyzer.locations } . Hot topics : { self.analyzer.hot_topics } "
+            metadata_prompt = f"No of people of age 0-20 : {self.analyzer.age_groups[0]} . No of people of age 20-40 : { self.analyzer.age_groups[1] }. No of people of age 40+ : { self.analyzer.age_groups[2] } .Average age : { self.analyzer.average_age} . Top 3 locations : { self.analyzer.locations } . Hot topics : { self.analyzer.hot_topics } "
 
 
         
