@@ -24,7 +24,6 @@ message_analysis_args = {
 
 message_content_args = {
     "title", 
-    "description", 
 
 }
 
@@ -92,7 +91,11 @@ class ContentGeneratorAPI(Resource):
         print(request.json)
         print(type(request.json))
         title = request.json['title']
-        description = request.json['description']
+        description = ""
+        try:
+            description = request.json['description']
+        except:
+            pass 
 
         
        
