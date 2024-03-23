@@ -10,7 +10,7 @@ export default function Audience() {
     const [labels1, setLabels1] = useState([]);
 
     const [topics, setTopics] = useState([]);
-    const [date, setDate] = useState("--");
+    const [date, setDate] = useState("");
 
     const chartData1 = {
         type: "pie",

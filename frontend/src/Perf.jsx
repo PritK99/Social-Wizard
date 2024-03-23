@@ -6,10 +6,6 @@ import {
 } from "@material-tailwind/react";
 import Chart from "react-apexcharts";
  
-// If you're using Next.js please use the dynamic import for react-apexcharts and remove the import from the top for the react-apexcharts
-// import dynamic from "next/dynamic";
-// const Chart = dynamic(() => import("react-apexcharts"), { ssr: false });
- 
 const chartConfig = {
   type: "line",
   height: 500,
@@ -117,19 +113,19 @@ export default function Perf() {
 
             <div className="stats stats-vertical shadow basis-1/3">
             <div className="stat">
-                <div className="stat-title">Downloads</div>
+                <div className="stat-title">Impressions</div>
                 <div className="stat-value">31K</div>
                 <div className="stat-desc">Jan 1st - Feb 1st</div>
             </div>
             
             <div className="stat">
-                <div className="stat-title">New Users</div>
-                <div className="stat-value">4,200</div>
-                <div className="stat-desc">↗︎ 400 (22%)</div>
+                <div className="stat-title">New Followers</div>
+                <div className="stat-value">420</div>
+                <div className="stat-desc">↗︎ 40 (22%)</div>
             </div>
             
             <div className="stat">
-                <div className="stat-title">New Registers</div>
+                <div className="stat-title">New views</div>
                 <div className="stat-value">1,200</div>
                 <div className="stat-desc">↘︎ 90 (14%)</div>
             </div>
