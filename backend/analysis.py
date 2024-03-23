@@ -31,9 +31,9 @@ class Analyzer:
                     self.age_groups[2] += 1
                 count +=1 
         
-        self.age = total_age/count 
+        self.average_age = total_age/count 
 
-        return self.age,self.age_groups 
+        return self.average_age,self.age_groups 
     
     def get_locations(self):
         
