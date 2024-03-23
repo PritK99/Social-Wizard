@@ -16,5 +16,8 @@ fi
 export ENV=development
 export CUDA_VISIBLE_DEVICES=""
 fuser -n tcp -k 5000
+export GEMINI_API_KEY=""
+export UNSPLASH_API_KEY=""
+export RAPID_API_KEY=""
 python3 main.py
 deactivate

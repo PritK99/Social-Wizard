@@ -1,6 +1,7 @@
 import requests
 import json 
 from user import User 
+import os 
 
 class twitterHandler:
     def __init__(self,name):
@@ -19,7 +20,7 @@ class twitterHandler:
         #     "X-RapidAPI-Host": "twitter241.p.rapidapi.com"
         # }
         headers = {
-            "X-RapidAPI-Key": "6453a65c59mshe869d90e296c524p179988jsna211f3933f70",
+            "X-RapidAPI-Key": os.environ['RAPID_API_KEY'],
             "X-RapidAPI-Host": "twitter241.p.rapidapi.com"
         }
         data = requests.get(url, headers=headers, params=querystring)
@@ -40,7 +41,7 @@ class twitterHandler:
         #     "X-RapidAPI-Host": "twitter241.p.rapidapi.com"
         # }
         headers = {
-            "X-RapidAPI-Key": "6453a65c59mshe869d90e296c524p179988jsna211f3933f70",
+            "X-RapidAPI-Key": os.environ['RAPID_API_KEY'],
             "X-RapidAPI-Host": "twitter241.p.rapidapi.com"
         }
 
@@ -61,7 +62,7 @@ class twitterHandler:
         # }
 
         headers = {
-            "X-RapidAPI-Key": "6453a65c59mshe869d90e296c524p179988jsna211f3933f70",
+            "X-RapidAPI-Key": os.environ['RAPID_API_KEY'],
             "X-RapidAPI-Host": "twitter241.p.rapidapi.com"
         }
         data = requests.get(url, headers=headers, params=querystring)

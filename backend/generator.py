@@ -1,6 +1,7 @@
 import google.generativeai as genai
 import requests 
 from utils import clean_text 
+import os 
 
 safety_settings = [
     {
@@ -28,16 +29,14 @@ safety_settings = [
 class ContentGenerator:
     def __init__(self, analyzer = None ):
         self.analyzer = analyzer  
-        GEMINI_API_KEY = "AIzaSyCGOYJNkoztEVxDN28qgzhe1VCb-RGSh6c"
 
         self.model = genai.GenerativeModel('gemini-pro')
-        genai.configure(api_key=GEMINI_API_KEY)
+        genai.configure(api_key=os.environ['GEMINI_API_KEY'])
         
     
     def get_image_link(self, search_query, page=1, per_page=1):
-        UNSPLASH_ACCESS_KEY = "Tu32Z8QsAUfhs0VAODyy4i0Vv3ddwDPf1Ba2N-EMB3s"
 
-        url = f"https://api.unsplash.com/search/photos?query={search_query}&per_page={per_page}&page={page}&client_id={UNSPLASH_ACCESS_KEY}"
+        url = f"https://api.unsplash.com/search/photos?query={search_query}&per_page={per_page}&page={page}&client_id={os.environ['UNSPLASH_API_KEY']}"
         response = requests.get(url)
         if response.status_code == 200:
             data = response.json()

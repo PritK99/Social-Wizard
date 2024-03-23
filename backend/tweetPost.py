@@ -6,8 +6,8 @@ import json
 # export 'CONSUMER_KEY'='<your_consumer_key>'
 # export 'CONSUMER_SECRET'='<your_consumer_secret>'
 
-consumer_key = os.environ.get("CONSUMER_KEY")
-consumer_secret = os.environ.get("CONSUMER_SECRET")
+consumer_key = "rX6QW1TzxNDCF0sGCUKZZFbSu"
+consumer_secret = "159HsvdGK3VWlHAo7RFrY3k0lQeyw0JzmqKBiyQdUuIcvbwn4n"
 
 # Be sure to add replace the text of the with the text you wish to Tweet. You can also add parameters to post polls, quote Tweets, Tweet with reply settings, and Tweet to Super Followers in addition to other features.
 payload = {"text": "Hello world!"}
@@ -16,6 +16,7 @@ payload = {"text": "Hello world!"}
 request_token_url = "https://api.twitter.com/oauth/request_token?oauth_callback=oob&x_auth_access_type=write"
 oauth = OAuth1Session(consumer_key, client_secret=consumer_secret)
 
+fetch_response = None 
 try:
     fetch_response = oauth.fetch_request_token(request_token_url)
 except ValueError:

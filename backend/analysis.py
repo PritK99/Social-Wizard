@@ -4,9 +4,8 @@ import datetime
 import pytz
 from fuzzywuzzy import process
 from utils import extract_python_list
+import os 
 
-GEMINI_API_KEY_1 = "AIzaSyCUILsC42O2soKx8_P0VQhHKL44i9qhqhs"
-GEMINI_API_KEY_2 = "AIzaSyCGOYJNkoztEVxDN28qgzhe1VCb-RGSh6c"
 class Analyzer:
 
     def __init__(self, userList ) -> None:
@@ -47,7 +46,7 @@ class Analyzer:
         not want unique names in the list . Size of output list from you should be same as input list by me . 
 
         """
-        p = gemini_prompt(prompt,GEMINI_API_KEY_1)
+        p = gemini_prompt(prompt,os.environ['GEMINI_API_KEY'])
         # p = mistral_prompt(prompt)
         # print(p)
 
@@ -106,7 +105,7 @@ class Analyzer:
         It should be sorted descending by popularity . 
         Give it in python list format only i.e surrounded by brackets and separated by comma.
         """
-        p = gemini_prompt(prompt,GEMINI_API_KEY_2)
+        p = gemini_prompt(prompt,os.environ['GEMINI_API_KEY'])
         # p = mistral_prompt(prompt)
         print(p)
         hot_topics = extract_python_list(p)[1:-1].split(",")

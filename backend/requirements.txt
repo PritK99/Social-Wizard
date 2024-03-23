@@ -6,3 +6,4 @@ python-Levenshtein
 pillow 
 fuzzywuzzy
 flask-cors
+requests-oauthlib
