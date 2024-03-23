@@ -19,7 +19,7 @@ class twitterHandler:
         #     "X-RapidAPI-Host": "twitter241.p.rapidapi.com"
         # }
         headers = {
-            "X-RapidAPI-Key": "1564210467msh4411bee5b04f222p1e09dcjsn04cef6c0a400",
+            "X-RapidAPI-Key": "6453a65c59mshe869d90e296c524p179988jsna211f3933f70",
             "X-RapidAPI-Host": "twitter241.p.rapidapi.com"
         }
         data = requests.get(url, headers=headers, params=querystring)
@@ -40,7 +40,7 @@ class twitterHandler:
         #     "X-RapidAPI-Host": "twitter241.p.rapidapi.com"
         # }
         headers = {
-            "X-RapidAPI-Key": "1564210467msh4411bee5b04f222p1e09dcjsn04cef6c0a400",
+            "X-RapidAPI-Key": "6453a65c59mshe869d90e296c524p179988jsna211f3933f70",
             "X-RapidAPI-Host": "twitter241.p.rapidapi.com"
         }
 
@@ -60,7 +60,7 @@ class twitterHandler:
         # }
 
         headers = {
-            "X-RapidAPI-Key": "1564210467msh4411bee5b04f222p1e09dcjsn04cef6c0a400",
+            "X-RapidAPI-Key": "6453a65c59mshe869d90e296c524p179988jsna211f3933f70",
             "X-RapidAPI-Host": "twitter241.p.rapidapi.com"
         }
         data = requests.get(url, headers=headers, params=querystring)
