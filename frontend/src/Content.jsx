@@ -53,9 +53,9 @@ export default function Content() {
                 <textarea onChange={(e)=>{setDesc(e.target.value)}} className="textarea text-lg textarea-bordered textarea-primary h-60" placeholder="Topic..."></textarea>
                 </label>
             </div>
-            <div className="flex flex-col justify-between">
-            <div className="card flex flex-row basis-2/3 gap-x-5 bg-base-100 shadow-xl">
-                {showLoader ? <div className="skeleton w-96 h-96"></div> : <><div className="basis-1/2">
+            <div className="flex flex-col justify-between basis-2/3 gap-y-5">
+            <div className="card flex flex-row basis-2/3 gap-x-5 bg-base-100 shadow-xl w-full">
+                {showLoader ? <div className="skeleton w-full h-96"></div> : <><div className="basis-1/2">
                     <p className="text-left">
                     <Markdown>{res["text"]}</Markdown>
                     </p>
