@@ -1,9 +1,3 @@
-import {
-  Card,
-  CardBody,
-  CardHeader,
-  Typography,
-} from "@material-tailwind/react";
 import Chart from "react-apexcharts";
  
 const chartConfig = {
@@ -31,7 +25,6 @@ const chartConfig = {
     dataLabels: {
       enabled: false,
     },
-    colors: ["#FFFFFF", "#e70dfe"],
     stroke: {
       lineCap: "round",
       curve: "smooth",
@@ -48,7 +41,7 @@ const chartConfig = {
       },
       labels: {
         style: {
-          colors: "#FFFFFF",
+          colors: "#777777",
           fontSize: "12px",
           fontFamily: "inherit",
           fontWeight: 400,
@@ -69,7 +62,7 @@ const chartConfig = {
     yaxis: {
       labels: {
         style: {
-          colors: "#FFFFFF",
+          colors: "#777777",
           fontSize: "12px",
           fontFamily: "inherit",
           fontWeight: 400,
@@ -78,7 +71,7 @@ const chartConfig = {
     },
     grid: {
       show: true,
-      borderColor: "#dddddd",
+      borderColor: "#777777",
       strokeDashArray: 5,
       xaxis: {
         lines: {
@@ -98,7 +91,7 @@ const chartConfig = {
     },
     legend: { // Add the legend configuration
         labels: {
-            colors: '#ffffff' // set legend text color to black
+            colors: '#777777' // set legend text color to black
         }
     }
   },
