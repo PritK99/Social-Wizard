@@ -2,7 +2,6 @@
 import google.generativeai as genai
 import requests
 
-# GEMINI_API_KEY = "AIzaSyCGOYJNkoztEVxDN28qgzhe1VCb-RGSh6c"
 safety_settings = [
     {
         "category": "HARM_CATEGORY_DANGEROUS",
@@ -27,9 +26,6 @@ safety_settings = [
 ]
 
 def gemini_prompt(prompt,GEMINI_API_KEY):
-    # GEMINI_API_KEY = "AIzaSyCUILsC42O2soKx8_P0VQhHKL44i9qhqhs"
-    # UNSPLASH_ACCESS_KEY = "Tu32Z8QsAUfhs0VAODyy4i0Vv3ddwDPf1Ba2N-EMB3s"
-
     # We use Gemini Pro for our implementation
     model = genai.GenerativeModel('gemini-pro')
     genai.configure(api_key=GEMINI_API_KEY)
