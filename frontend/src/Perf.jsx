@@ -99,7 +99,7 @@ const chartConfig = {
  
 export default function Perf() {
     return(
-        <div className="flex flex-row w-screen h-screen bg-base-300 shadow-xl p-4 gap-x-10">
+        <div className="flex flex-row max-w-screen h-screen bg-base-300 shadow-xl p-4 gap-x-5">
             <div className="card bg-base-200 basis-2/3">
                 <Chart {...chartConfig}  className="h-full"/>
             </div>

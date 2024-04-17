@@ -10,7 +10,7 @@ export default function Audience() {
     const [labels1, setLabels1] = useState([]);
 
     const [topics, setTopics] = useState([]);
-    const [date, setDate] = useState("");
+    const [date, setDate] = useState("--:--");
 
     const chartData1 = {
         type: "pie",
@@ -80,19 +80,6 @@ export default function Audience() {
                 const analysisResults = await response.json();
                 console.log(analysisResults);
 
-                // Update chart series with analysisResults data
-                // setChartData1({
-                //     ...chartData1,
-                //     series: analysisResults.location_frequencies,
-                //     labels: analysisResults.top_3_locations
-                // });
-
-                // setChartData2({
-                //     ...chartData2,
-                //     series: analysisResults.age_groups,
-                //     labels: ['0-20','20-40','60+']
-                // });
-
                 setLabels1(analysisResults.top_3_locations);
                 setSeries1(analysisResults.location_frequencies);
                 setSeries2(analysisResults.age_groups);
@@ -108,25 +95,25 @@ export default function Audience() {
     };
 
     return (
-        <div className="flex flex-grow gap-x-5 w-screen h-screen bg-base-300 shadow-xl p-4">
-            <div className="basis-1/3 flex flex-col gap-y-5">
-                <div className="card bg-base-100 basis-1/2 shadow-xl">
-                    <label className="form-control text-center">
+        <div className="flex gap-x-5 max-w-screen h-screen bg-base-300 shadow-xl p-5">
+            <div className="basis-1/3 flex flex-col gap-y-5 max-h-screen">
+                <div className="p-5 rounded-[1em] bg-base-100 basis-1/3 shadow-xl max-h-screen">
+                    <label className="form-control text-center">    
                         <div className="label">
                             <span className="label-text text-sm">Enter Twitter ID: </span>
                         </div>
-                        <div className="flex flex-row gap-x-5">
+                        <div className="flex flex-row gap-x-2">
                             <input type="text" onChange={(e) => {setTwit(e.target.value)}} placeholder="example_123" className="input input-bordered w-full max-w-lg" />
                             <button className="btn btn-primary" onClick={handleRunButtonClick}>Submit</button>
                         </div>
                     </label>
                 </div>
                 <div className="card bg-base-100 basis-1/2 shadow-xl p-5">
-                    <figure className="px-5 pt-5">
+                    <figure>
                         <Chart {...chartData1} />
                     </figure>
                     <div className="card-body items-center text-center">
-                        <h2 className="card-title pb-0">Countries</h2>
+                        <h2 className="card-title pb-0 mb-0">Countries</h2>
                         <p>Breakdown of your audience, country-wise</p>
                         <div className="card-actions"></div>
                     </div>
@@ -156,8 +143,8 @@ export default function Audience() {
                 </div>
             </div>
             <div className="basis-1/3 flex flex-col gap-y-5">
-                <div className="card bg-base-100 basis-1/2 shadow-xl p-5">
-                    <figure className="px-5 pt-5">
+                <div className="card bg-base-100 basis-2/3 shadow-xl">
+                    <figure>
                         <Chart {...chartData2} />
                     </figure>
                     <div className="card-body items-center text-center">
@@ -166,7 +153,7 @@ export default function Audience() {
                         <div className="card-actions"></div>
                     </div>
                 </div>
-                <div className="card bg-zinc-500 basis-1/2 shadow-xl justify-center">
+                <div className="p-5 rounded-[1em] bg-zinc-500 basis-1/2 shadow-xl justify-center">
                     <p className="text-lg">Best time to upload: </p>
                     <p className="text-3xl align-middle">{`${date} GMT`}</p>
                 </div>

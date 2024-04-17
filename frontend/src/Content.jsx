@@ -40,15 +40,15 @@ export default function Content() {
     };
 
     return (
-        <div className="flex flex-grow gap-x-10 w-screen h-screen bg-base-300 shadow-xl p-10">
+        <div className="flex flex-grow gap-x-5 max-w-screen h-screen bg-base-300 shadow-xl p-5">
             <div className="card basis-1/3 bg-base-100 shadow-xl">
                 <label className="form-control">
                 <div className="label">
                     <span className="label-text text-lg">Enter Topic of Post: </span>
                 </div>
-                <textarea required={true} onChange={(e)=>{setTopic(e.target.value)}} className="textarea text-lg textarea-bordered textarea-info h-20" placeholder="Topic..."></textarea>
+                <textarea required={true} onChange={(e)=>{setTopic(e.target.value)}} className="textarea text-lg textarea-bordered textarea-info h-auto" placeholder="Topic..."></textarea>
                 <div className="label">
-                    <span className="label-text text-lg pt-20">Enter Description of the Post: </span>
+                    <span className="label-text text-lg pt-10">Enter Description of the Post: </span>
                 </div>
                 <textarea onChange={(e)=>{setDesc(e.target.value)}} className="textarea text-lg textarea-bordered textarea-primary h-60" placeholder="Topic..."></textarea>
                 </label>
