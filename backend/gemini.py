@@ -64,7 +64,7 @@ def mistral_prompt(prompt):
     }
     headers = {
         "content-type": "application/json",
-        "X-RapidAPI-Key": "1564210467msh4411bee5b04f222p1e09dcjsn04cef6c0a400",
+        "X-RapidAPI-Key": "",
         "X-RapidAPI-Host": "open-ai32.p.rapidapi.com"
     }
 
@@ -72,6 +72,3 @@ def mistral_prompt(prompt):
 
     # print(response.json())
     return response.json()['result']
-
-# if __name__=='__main__':
-#     gemini_prompt("Hi", "AIzaSyCGOYJNkoztEVxDN28qgzhe1VCb-RGSh6c")
